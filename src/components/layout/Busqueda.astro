@@ -1,0 +1,32 @@
+---
+import { handleSubmit } from "./Busqueda.astro.0.mts";
+---
+
+<script>
+    import DOMPurify from 'dompurify';
+
+    export const handleSubmit = (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const searchValue = formData.get("search");
+        const searchTerm = searchValue ? DOMPurify.sanitize(searchValue.toString()) : '';
+        console.log(searchTerm);
+    };
+</script>
+
+<aside style="width: 520px;">
+    <form>
+        <div >
+            <label for="search">Búsqueda</label>
+            
+        </div>
+        <input
+            type="text" 
+            name="search"
+            id="search" 
+            placeholder=" Ingresa un término o frase a buscar en la enciclopedia…"
+            style="width: 100%;"
+        /> 
+        <button type="submit">Buscar</button>
+    </form>
+</aside>
