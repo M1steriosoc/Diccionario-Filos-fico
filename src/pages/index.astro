@@ -7,19 +7,21 @@ import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
 
 const ontologia = [
-  { name: 'Materialismo ontológico', url: 'https://diccionario.cesarintriago.net/materialismo-ontologico/' },
-  { name: 'Dialéctica', url: 'https://uno.antfu.me/' },
+  { name: 'Materialismo ontológico', url: '/materialismo-ontologico/' },
+  { name: 'Dialéctica', url: '/dialectica/' },
   {
     name: 'Finalidad',
-    url: 'https://docs.astro.build/en/guides/content-collections/',
+    url: '/finalidad',
   },
-  { name: 'Causalidad', url: 'https://docs.astro.build/en/guides/rss/' },
+  { name: 'Causalidad', url: '/causalidad/' },
   {
     name: 'Existencia, Posibilidad, Necesidad',
-    url: 'https://docs.astro.build/en/guides/integrations-guide/sitemap/',
+    url: '/existencia/',
   },
-  { name: 'Apariencia y Verdad', url: 'https://vercel.com' },
-  { name: 'Idea general y Ontología de la Corrupción', url: 'https://www.typescriptlang.org/' },
+  { name: 'Apariencia y Verdad', url: '/aparienciayverdad/' },
+  { name: 'Televisión material y Televisión formal', url: '/tvmaterial/' },
+  { name: 'Apariencias y verdades en la televisión', url: '/aparienciasyverdadestv/' },
+  { name: 'Idea general y Ontología de la Corrupción', url: '/corrupcion/' },
 ];
 
 const gnoseologia = [
@@ -127,7 +129,6 @@ const estetica=[
                     <a
                       class='sanchez'
                       href={item.url}
-                      target='_blank'
                       title={`Go to ${item.name}`}
                     >
                       {item.name}
@@ -153,7 +154,7 @@ const estetica=[
                   <a
                     class='sanchez'
                     href={item.url}
-                    target='_blank'
+                
                     title={`Go to ${item.name}`}
                   >
                     {item.name}
@@ -185,7 +186,7 @@ const estetica=[
                   <a
                     class='sanchez'
                     href={item.url}
-                    target='_blank'
+                    
                     title={`Go to ${item.name}`}
                   >
                     {item.name}

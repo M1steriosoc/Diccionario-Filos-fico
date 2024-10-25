@@ -22,7 +22,7 @@ import { supabase } from '../../../src/lib/supabase.js';
 let { data: articulo, error } = await supabase
   .from('articulo')
   .select('titulo, id')
-  .eq('categoria', 'Materialismo ontológico')
+  .eq('categoria', 'Televisión material y Televisión formal')
   .order('id', { ascending: true });
 
 if (error) {
@@ -46,14 +46,14 @@ if (error) {
 
     <div class='w-1/2 h-630 mx-auto'>
   <Card>
-    <h1 class='text-3xl font-bold text-center'>Materialismo Ontológico</h1>
+    <h1 class='text-3xl font-bold text-center'>Televisión material y Televisión formal</h1>
     <div class={styles.container} >
 
 
       <ol class={styles['lista-ol']}>
         {articulo && articulo.map((item: any) => (
           <li class={styles['lista-li']} tabindex="1">
-            <a href={`https://diccionario.cesarintriago.net/`}>{item.titulo}</a>
+            <a href={`/preambulares/${item.id}`}>{item.titulo}</a>
           </li>
         ))}
       </ol>
