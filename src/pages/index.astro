@@ -25,21 +25,21 @@ const ontologia = [
 ];
 
 const gnoseologia = [
-  { name: 'Doctrina de las categorías ', url: 'https://astro.build/' },
-  { name: 'Teoría filosófica (gnoseológica) de la ciencia', url: 'https://uno.antfu.me/' },
+  { name: 'Doctrina de las categorías ', url: 'categorias' },
+  { name: 'Teoría filosófica (gnoseológica) de la ciencia', url: '/ciencia/' },
 ];
 
 const antropologia = [
-  { name: "Cuestiones proemiales", url: "https://astro.build/" },
-  { name: "Individuo y Persona", url: "https://astro.build/" },
-  { name: "Libertad", url: "https://astro.build/" },
-  { name: "Sentido de la vida y religación", url: "https://astro.build/" },
-  { name: "Filosofía de la religión", url: "https://astro.build/" },
-  { name: "Fetichismo, Magia y Religión", url: "https://astro.build/" },
-  { name: "Agnosticismo", url: "https://astro.build/" },
-  { name: "Filosofía de la cultura", url: "https://astro.build/" },
-  { name: "Antropología filosófica", url: "https://astro.build/" },
-  { name: "Filosofía de la historia", url: "https://uno.antfu.me/" }
+  { name: "Cuestiones proemiales", url: "/antropologia/" },
+  { name: "Individuo y Persona", url: "/individuoypersona/" },
+  { name: "Libertad", url: "/libertad/" },
+  { name: "Sentido de la vida y religación", url: "/sentidodelavida/" },
+  { name: "Filosofía de la religión", url: "/filosofiadelareligion/" },
+  { name: "Fetichismo, Magia y Religión", url: "/fetichismo/" },
+  { name: "Agnosticismo", url: "/agnosticismo/" },
+  { name: "Filosofía de la cultura", url: "/filosofiadelacultura/" },
+
+  { name: "Filosofía de la Historia", url: "/filosofiadelahistoria/" }
 ];
 
 const filosofiadelahistoria = [
@@ -54,11 +54,11 @@ const filosofiadelahistoria = [
 ];
 
 const eticaymoral = [
-  { name: "Etica y moral", url: "https://astro.build/" },
-  { name: "Derechos humanos", url: "https://astro.build/" },
-  { name: "Muerte, fallecimiento, eutanasia", url: "https://astro.build/" },
-  { name: "Bioética", url: "https://astro.build/" },
-  { name: "Tolerancia", url: "https://astro.build/" }
+  { name: "Ética y moral", url: "/eticaymoral/" },
+  { name: "Derechos humanos", url: "/derechoshumanos/" },
+  { name: "Muerte, fallecimiento, eutanasia", url: "/muerte/" },
+  { name: "Bioética", url: "/bioetica/" },
+  { name: "Tolerancia", url: "/tolerancia/" }
 ];
 
 const filosofiapolitica = [
@@ -143,8 +143,7 @@ const estetica=[
 
       <div class='col-span-4'>
         <Card color ="#ef4444">
-        <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-          III. Gnoseología (Teoría de la ciencia)
+        <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>III. Gnoseología (Teoría de la ciencia)
         </h2>
         <ul class='flex gap-4 flex-wrap'>
           {
@@ -173,9 +172,9 @@ const estetica=[
     <section id='about' class='grid md:grid-cols-13 gap-8 mt-4'>
       <h2 class='hidden'>About Brutal</h2>
       <div class='col-span-6'>
-        <Card color ="#AD1519">
+        <Card color ="#EF4444">
         <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-          IV.I. Antropología
+          IV. Antropología
         </h2>
 
         <ul class='flex gap-4 flex-wrap'>
@@ -203,17 +202,16 @@ const estetica=[
     <div class='col-span-6'>
       <Card color="#FABD00">
       <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-        IV.II Filosofía de la Historia
+        V. Ética y moral
       </h2>
       <ul class='flex gap-4 flex-wrap'>
         {
-          filosofiadelahistoria.map((item) => (
+          eticaymoral.map((item) => (
             <li>
               <Pill>
                 <a
                   class='sanchez'
                   href={item.url}
-                  target='_blank'
                   title={`Go to ${item.name}`}
                 >
                   {item.name}
@@ -230,7 +228,7 @@ const estetica=[
 
 
       <!--  Tamaño de la tarjeta -->
-      <div class='col-span-6'>
+    <!--   <div class='col-span-6'>
           <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
             V. Ética y moral
@@ -254,12 +252,13 @@ const estetica=[
             }
           </ul>
         </Card>
-      </div>
+      </div> -->
 
+      <section></section>
       <div class='col-span-6'>
         <Card>
         <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-          VI. Filosofia política
+          VI.I. Filosofia política
         </h2>
         <ul class='flex gap-4 flex-wrap'>
           {
@@ -287,7 +286,7 @@ const estetica=[
     <div class='col-span-6'>
       <Card>
       <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-        VI.I Democracia como sociedad política
+        VI.II. Democracia como sociedad política
       </h2>
       <ul class='flex gap-4 flex-wrap'>
         {

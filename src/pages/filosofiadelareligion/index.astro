@@ -22,7 +22,7 @@ import { supabase } from '../../../src/lib/supabase.js';
 let { data: articulo, error } = await supabase
   .from('articulo')
   .select('titulo, id')
-  .eq('categoria', 'Materialismo ontológico')
+  .eq('categoria', 'Filosofía de la Religión')
   .order('id', { ascending: true });
 
 if (error) {
@@ -46,7 +46,7 @@ if (error) {
 
     <div class='w-1/2 h-630 mx-auto'>
   <Card>
-    <h1 class='text-3xl font-bold text-center'>Materialismo Ontológico</h1>
+    <h1 class='text-3xl font-bold text-center'>Filosofía de la Religión</h1>
     <div class={styles.container} >
 
 
