@@ -22,7 +22,7 @@ import { supabase } from '../../../src/lib/supabase.js';
 let { data: articulo, error } = await supabase
   .from('articulo')
   .select('titulo, id')
-  .eq('categoria', 'Cuestiones preambulares')
+  .eq('categoria', 'Materialismo ontológico')
   .order('id', { ascending: true });
 
 if (error) {
@@ -53,7 +53,7 @@ if (error) {
       <ol class={styles['lista-ol']}>
         {articulo && articulo.map((item: any) => (
           <li class={styles['lista-li']} tabindex="1">
-            <a href={`/preambulares/${item.id}`}>{item.titulo}</a>
+            <a href={`/materialismo-ontologico/${item.id}`}>{item.titulo}</a>
           </li>
         ))}
       </ol>
